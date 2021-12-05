@@ -4,21 +4,27 @@
     $word = $_GET['word'];
 
     $conn = new PDO("mysql:host=localhost;dbname=vocabulary",'root','');
-    $sql = "select * from words where left(word,1) = '{$word}';";
+    $sql = "select * from words where left(word,1) = '{$word}' order by word;";
     $query = $conn->prepare($sql);
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_OBJ);
-
-    foreach($result as $x):
 ?>
-    <p value=<?php echo $x->word_id; ?>><?php echo $x->word; ?></p>
-<?php endforeach; ?>
 
-<section id="translate"></section>
+<section class="word container">
+
+    <?php foreach($result as $x): ?>
+        <p value=<?php echo $x->word_id; ?>><?php echo $x->word; ?></p>
+    <?php endforeach; ?>
+
+    <p id="translate"></p>
+
+</section>
 
 <script>
     $(document).ready(function(){
         $('p').on('click',function(){
+            $('#translate').css('display','block');
+            $('footer').css('display','none');
             var wordForTranslate = $(this).text();
             //$('#translate').html(wordForTranslate);
             $.ajax({

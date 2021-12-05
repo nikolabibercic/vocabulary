@@ -12,5 +12,5 @@
 
     foreach($result as $x):
 ?>
-    <p><?php echo $x->translate; ?></p>
+    <?php echo $wordForTranslate.'&nbsp&nbsp&nbsp>&nbsp&nbsp&nbsp'.$x->translate; ?>
 <?php endforeach; ?>
