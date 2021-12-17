@@ -13,7 +13,9 @@
 <section class="word container">
 
     <?php foreach($result as $x): ?>
-        <p value=<?php echo $x->word_id; ?>><?php echo $x->word; ?></p>
+        <article id="clickArea">
+            <p id="wordArticle"><?php echo $x->article ?></p><p id="wordForTranslate"><?php echo $x->word; ?></p> 
+        </article>  
     <?php endforeach; ?>
 
     <p id="translate"></p>
@@ -22,7 +24,24 @@
 
 <script>
     $(document).ready(function(){
-        $('p').on('click',function(){
+        $('#wordForTranslate').on('click',function(){
+            $('#translate').css('display','block');
+            $('footer').css('display','none');
+            var wordForTranslate = $(this).text();
+            //$('#translate').html(wordForTranslate);
+            $.ajax({
+                url: 'translate.php',
+                method: 'POST',
+                data:{
+                    wordForTranslate: wordForTranslate
+                },
+                success: function(data){
+                    $('#translate').html(data);
+                }
+            });
+        });
+
+        $('#wordArticle').on('click',function(){
             $('#translate').css('display','block');
             $('footer').css('display','none');
             var wordForTranslate = $(this).text();
