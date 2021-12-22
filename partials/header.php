@@ -7,8 +7,10 @@
     <title>Vocabulary</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/53eca7a38b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a href="index.php"><h1>Španski rečnik</h1></a>
+        <button id="btnX">X</button>
     </header>

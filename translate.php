@@ -5,7 +5,7 @@
     
     $wordForTranslate = $_POST['wordForTranslate'];
 
-    $sql = "select translate from words where word = '{$wordForTranslate}';";
+    $sql = "select translate from words where concat(ifnull(article,''),' ',word) = '{$wordForTranslate}';";
     $query = $conn->prepare($sql);
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_OBJ);
