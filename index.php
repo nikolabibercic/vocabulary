@@ -1,4 +1,17 @@
 <?php require 'partials/header.php'; ?>
+
+<?php require 'instances-of-objects.php'; ?>
+
+<?php  if(isset($_SESSION['userId'])): ?>
+    <section class="insertForm container">
+        <form action="insert.php" method="POST" autocomplete="on">
+            <input type="text" placeholder="Nova reč" required>
+            <input type="text" placeholder="Prevod" required>
+            <button>Sačuvaj</button>
+        </form>
+    </section>
+<?php endif; ?>
+
     <section class="alphabet container">
         <a href="word.php?word=a">a</a>
         <a href="word.php?word=b">b</a>
