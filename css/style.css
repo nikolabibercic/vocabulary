@@ -36,6 +36,7 @@ header h1 {
 header button {
     width: 30px;
     margin-top: 10px;
+    cursor: pointer;
 }
 /************************
 alphabet page
@@ -67,6 +68,10 @@ word page
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+.word i {
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 .word p {
     font-size: 1.5rem;
@@ -118,6 +123,16 @@ log in
 /************************
 insert Form
 ************************/
+.insertForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.insertForm p {
+    text-align: center;
+    margin-top: 30px;
+}
 .insertForm form {
     display: flex;
     flex-direction: column;

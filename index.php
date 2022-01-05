@@ -4,9 +4,16 @@
 
 <?php  if(isset($_SESSION['userId'])): ?>
     <section class="insertForm container">
+        <?php if(isset($_GET['insert']) && $_GET['insert'] == '1'): ?>
+            <p style="color:green;">Insert je uspešno izvršen!</p>
+        <?php endif; ?>
+        <?php if(isset($_GET['insert']) && $_GET['insert'] == '0'): ?>
+            <p style="color:red;">Insert nije izvršen!</p>
+        <?php endif; ?>
         <form action="insert.php" method="POST" autocomplete="on">
-            <input type="text" placeholder="Nova reč" required>
-            <input type="text" placeholder="Prevod" required>
+            <input type="text" name="article" placeholder="Član">
+            <input type="text" name="newWord" placeholder="Nova reč" required>
+            <input type="text" name="translate" placeholder="Prevod" required>
             <button>Sačuvaj</button>
         </form>
     </section>
