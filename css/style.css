@@ -173,3 +173,67 @@ footer i {
     color: white;
     margin-top: 10px;
 }
+/*********************
+responsive
+*********************/
+@media(max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+    /************************
+    header
+    ************************/
+    header {
+        margin-bottom: 30px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    /************************
+    alphabet page
+    ************************/
+    .alphabet {
+        margin-bottom: 100px;
+    }
+    .alphabet a {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    /************************
+    word page
+    ************************/
+    .word {
+        margin-bottom: 80px;
+    }
+    .word #translate {
+        font-size: 2rem;
+    }
+    /************************
+    log in
+    ************************/
+    .logIn form input {
+        width: 100%;
+    }
+    .logIn form button {
+        width: 100%;
+    }
+    /************************
+    footer
+    ************************/
+    footer {
+        position: fixed;
+        bottom: 0px;
+    }
+    /************************
+    insert Form
+    ************************/
+    .insertForm form {
+        width: 100%;
+    }
+    .insertForm form input {
+        width: 100%;
+    }
+    .insertForm form button {
+        width: 100%;
+    } 
+}
