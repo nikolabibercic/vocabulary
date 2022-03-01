@@ -12,3 +12,5 @@ CREATE TABLE users(
 );
 
 insert into users(username,password) values ('piksi','piksi');
+
+ALTER TABLE words CONVERT TO CHARACTER SET utf8 COLLATE utf8_spanish_ci;

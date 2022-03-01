@@ -34,7 +34,7 @@
         <a href="word.php?word=l">l</a>
         <a href="word.php?word=m">m</a>
         <a href="word.php?word=n">n</a>
-        <a href="word.php?word=n">ñ</a>
+        <a href="word.php?word=ñ">ñ</a>
         <a href="word.php?word=o">o</a>
         <a href="word.php?word=p">p</a>
         <a href="word.php?word=q">q</a>
