@@ -7,7 +7,7 @@
 
     $conn = $conn->connect();
 
-    $sql = "select word_id, concat(ifnull(article,''),' ',word) as articleword from words where left(word,1) = '{$word}' order by word;";
+    $sql = "select word_id, concat(ifnull(article,''),' ',word) as articleword from words where left(replace(replace(word,'¿',''),'¡',''),1) = '{$word}' order by word;";
     $query = $conn->prepare($sql);
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_OBJ);
