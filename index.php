@@ -4,10 +4,13 @@
 
 <?php  if(isset($_SESSION['userId'])): ?>
     <section class="insertForm container">
-        <?php if(isset($_GET['insert']) && $_GET['insert'] == '1'): ?>
+        <?php if(isset($_GET['insert']) && $_GET['insert'] == 2): ?>
+            <p style="color:red;">Insert nije izvršen! Reč već postoji.</p>
+        <?php endif; ?>
+        <?php if(isset($_GET['insert']) && $_GET['insert'] == 1): ?>
             <p style="color:green;">Insert je uspešno izvršen!</p>
         <?php endif; ?>
-        <?php if(isset($_GET['insert']) && $_GET['insert'] == '0'): ?>
+        <?php if(isset($_GET['insert']) && $_GET['insert'] == 0): ?>
             <p style="color:red;">Insert nije izvršen!</p>
         <?php endif; ?>
         <form action="insert.php" method="POST" autocomplete="on">

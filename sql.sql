@@ -18,3 +18,5 @@ ALTER TABLE words CONVERT TO CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 DROP INDEX word ON words;
 
 ALTER TABLE words ADD UNIQUE `ARTICLE_WORD`(`ARTICLE`, `WORD`);
+
+update words set article = '' where article is null;
